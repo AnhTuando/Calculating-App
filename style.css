@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+body {
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  align-items: center;
+  position: relative;
+}
+
+/*----------------------------------- Wrap-box-1-------------------------- */
+.wrap-box-1 {
+  margin-top: 200px;
+  background-color: aquamarine;
+  width: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.wrap-box-1 .calculation {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sum,
+.minus,
+.mul,
+.divide {
+  width: 100px;
+  align-items: center;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  font-size: 30px;
+}
+
+.sum:hover {
+  background: rgb(2, 86, 196);
+  color: aliceblue;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.minus:hover {
+  background: rgb(236, 4, 4);
+  color: aliceblue;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.mul:hover {
+  background: rgb(232, 236, 4);
+  color: aliceblue;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.divide:hover {
+  background: rgb(47, 0, 158);
+  color: aliceblue;
+  cursor: pointer;
+  transition: 0.25s;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.divide:hover i,
+.minus:hover i,
+.mul:hover i,
+.sum:hover i {
+  animation: rotate 0.75s linear infinite;
+}
+.title {
+  width: 400px;
+  text-align: center;
+  font-size: 30px;
+  margin: 50px 0px;
+  background: rgb(224, 156, 8);
+  color: aliceblue;
+  padding: 10px 0px;
+  border-radius: 20px;
+}
+/*----------------------------------- Wrap-box-2-------------------------- */
+.wrap-box-2 {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  align-items: center;
+  margin-top: 200px;
+}
+.row-1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.back,
+.level,
+.score,
+.time {
+  width: 300px;
+  background-color: rgb(72, 72, 214);
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  color: aliceblue;
+}
+.back {
+  width: 50px;
+}
+.back:hover {
+  background: rgb(236, 4, 4);
+  color: aliceblue;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.level {
+  width: 150px;
+}
+.count-level,
+.count-score,
+.count-time {
+  color: rgb(255, 61, 223);
+}
+.content {
+  background-color: aliceblue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+}
+.content .calc {
+  display: flex;
+  gap: 80px;
+  margin-top: 80px;
+}
+.param-a,
+.param-b,
+.mark,
+.equal {
+  height: 50px;
+  font-size: 30px;
+  line-height: 50px;
+  padding: 0px 15px;
+  border: 1px solid #b6b6b6;
+  border-radius: 5px;
+}
+.result {
+  height: 50px;
+  font-size: 30px;
+  width: 80px;
+  text-align: center;
+}
+/* Question */
+
+.question {
+  background: rgb(24 149 177);
+  color: aliceblue;
+  width: 365px;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  align-items: center;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  font-weight: bold;
+}
+.question button,
+.time-over button {
+  width: 80px;
+  height: 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: rgb(216, 0, 0);
+}
+.question button:hover,
+.time-over button:hover {
+  background-color: rgb(210, 252, 24);
+  transition: 0.25s;
+}
+.p-1 {
+  color: rgb(13, 0, 190);
+}
+.p-2 span {
+  color: rgb(95, 226, 43);
+}
+/* Time Over */
+.time-over {
+  background: rgb(224, 156, 8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  gap: 10px;
+  position: absolute;
+  top: 50%;
+}
+.time-over p {
+  font-size: 20px;
+  color: aliceblue;
+  font-weight: bold;
+}
+/* Correct */
+
+.score-notice {
+  background-color: rgb(127, 255, 133);
+  color: rgb(0, 136, 146);
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  padding: 10px;
+  position: absolute;
+  top: 60%;
+}
+.next-cr,
+.next-wr {
+  width: 80px;
+  height: 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+}
+.wrong {
+  background-color: rgb(253, 0, 0);
+  position: absolute;
+  top: 50%;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  padding: 10px;
+}
+.next-cr:hover,
+.next-wr:hover,
+.clear:hover {
+  background-color: yellowgreen;
+  transition: 0.25s;
+  cursor: pointer;
+}
+/* Correct */
+.correct {
+  background-color: rgb(127, 255, 133);
+  color: rgb(0, 136, 146);
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+}
+.clear {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+}
+/* JS event */
+
+.none {
+  display: none;
+}

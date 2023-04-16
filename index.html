@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <!-- choose calculation -->
+      <div class="wrap-box-1 ">
+        <div class="calculation">
+          <div class="sum"><i class="fa-solid fa-plus fa-beat"></i></div>
+          <div class="minus"><i class="fa-solid fa-minus fa-beat"></i></div>
+          <div class="mul"><i class="fa-solid fa-xmark fa-beat"></i></div>
+          <div class="divide"><i class="fa-solid fa-divide fa-beat"></i></div>
+        </div>
+      </div>
+      <div class="title ">Choose The Calculation</div>
+      <!-- plus calculation -->
+
+      <div class="wrap-box-2 none">
+        <div class="row-1">
+          <div class="back"><i class="fa-solid fa-rotate-left"></i></div>
+          <div class="level">
+            <p>Level: <span class="count-level">1</span></p>
+          </div>
+          <div class="score">
+            <p>Your Correct Answer: <span class="count-score">0</span></p>
+          </div>
+          <div class="time">
+            <p>Time Remaining: <span class="count-time">15</span> s</p>
+          </div>
+        </div>
+        <div class="content">
+          <div class="calc">
+            <div class="param-a">1</div>
+            <div class="mark">+</div>
+            <div class="param-b">2</div>
+            <div class="equal">=</div>
+            <input type="text" class="result"></input>
+          </div>
+        </div>
+      </div>
+      <!-- attention -->
+
+      <div class="question none">
+        <p class="p-1">Do Not Use Any Calculation Tools !!!</p>
+        <p class="p-2">Press <span>"Enter"</span> To Save Your Result</p>
+        <p class="p-3">
+          If You Don't Press, The Result Can't Be Saved And You Won't Be Scored
+          For The Question
+        </p class="p-1">
+        <p>Click Ready To Start</p>
+        <button class="ready">READY</button>
+      </div>
+      <!-- timeover -->
+
+      <div class="time-over none">
+        <p >Out Of Time</p>
+        <p >You Don't Get Any Points For This Question</p>
+        <button class="next-btn">Next</button>
+      </div>
+      <!-- correct notice -->
+
+      <div class="correct none">
+        <p>Correct</p>
+        <button class="next-cr">Next</button>
+      </div>
+      <!-- wrong notice -->
+
+      <div class="wrong none">
+        <p>Wrong</p>
+        <button class="next-wr">Next</button>
+      </div>
+      <!-- score notice -->
+      <div class="score-notice none">
+        <p>Your Score: <span class="user-score">0</span> / 10</p>
+        <button class="clear">Back to Menu</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
