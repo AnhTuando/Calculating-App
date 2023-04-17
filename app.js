@@ -22,7 +22,7 @@ let level = document.querySelector(".count-level");
 let notice = document.querySelector(".score-notice");
 let userScore = document.querySelector(".user-score");
 let backToMenu = document.querySelector(".clear");
-
+let navBackToMenu = document.querySelector(".back");
 // count time
 function countTimeInterval() {
   let countTime = 15;
@@ -45,6 +45,19 @@ function countTimeInterval() {
       clearInterval(interval);
     }
   });
+  // NAV - Back to menu
+  navBackToMenu.onclick = function () {
+    clearInterval(interval);
+    time.innerHTML = 15;
+    notice.classList.add("none");
+    calcBoard.classList.add("none");
+    title.classList.remove("none");
+    choose.classList.remove("none");
+    levelCount = 1;
+    level.innerHTML = `${levelCount}`;
+    scoreCount = 0;
+    score.innerHTML = `${scoreCount}`;
+  };
 }
 // render attention
 function attention() {
@@ -170,7 +183,7 @@ function correctAndWrongbtn() {
 }
 correctAndWrongbtn();
 
-function main() {
+function mainPlus() {
   attention();
 
   renderQuestions();
@@ -178,4 +191,4 @@ function main() {
 
   correctAndWrongbtn();
 }
-main();
+mainPlus();

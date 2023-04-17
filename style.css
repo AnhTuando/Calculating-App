@@ -98,6 +98,7 @@ body {
   width: 800px;
   align-items: center;
   margin-top: 200px;
+  position: relative;
 }
 .row-1 {
   width: 100%;
@@ -124,6 +125,22 @@ body {
   color: aliceblue;
   cursor: pointer;
   transition: 0.25s;
+}
+.back-to-menu {
+  background-color: aliceblue;
+  color: black;
+  line-height: 40px;
+  border-radius: 5px;
+  height: 40px;
+  padding: 0px 10px;
+  position: absolute;
+  left: -155px;
+  top: 0;
+  display: none;
+}
+.back:hover .back-to-menu {
+  display: block;
+  transition: all 1s ease-in-out;
 }
 .level {
   width: 150px;
