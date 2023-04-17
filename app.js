@@ -23,6 +23,7 @@ let notice = document.querySelector(".score-notice");
 let userScore = document.querySelector(".user-score");
 let backToMenu = document.querySelector(".clear");
 let navBackToMenu = document.querySelector(".back");
+let expectvalue = document.querySelector(".ex-value");
 // count time
 function countTimeInterval() {
   let countTime = 15;
@@ -106,6 +107,8 @@ function checkResult() {
       } else {
         // Incorrect
         wrong.classList.remove("none");
+        let sum = calculateParams();
+        expectvalue.innerHTML = `${sum}`;
       }
     }
   });
@@ -116,7 +119,6 @@ let levelCount = 1;
 let scoreCount = 0;
 function correctAndWrongbtn() {
   let currentLevel = 1;
-
   // correct next btn
   nextCr.onclick = function () {
     countTimeInterval();
